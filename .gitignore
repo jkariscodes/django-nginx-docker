@@ -171,3 +171,6 @@ atlassian-ide-plugin.xml
 
 
 db-data/
+
+# Env files
+.env
