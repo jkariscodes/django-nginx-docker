@@ -17,8 +17,9 @@ RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev
 COPY Pipfile Pipfile.lock $APP_HOME/
 
 # Install the dependencies
-RUN pip install --upgrade pip && pip install pipenv \
-    && pipenv install --system
+RUN pip install --upgrade pip &&\
+    pip install pipenv &&\
+    pipenv install --system
 
 # Copy PROJECT files
 COPY . $APP_HOME
